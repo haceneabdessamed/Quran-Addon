@@ -18,9 +18,9 @@
                         <TextBlock Text=", " />
                         <TextBlock Text="Aya: " />
                         <TextBlock Text="{Binding Aya}"/>
-                        <TextBlock Text=" (" />
-                        <TextBlock Text="{Binding Texte}"/>
-                        <TextBlock Text=")" />
+                        <TextBlock Text=" (" FontFamily="KFGQPC Uthmanic Script HAFS"/>
+                        <TextBlock Text="{Binding Texte}" FontFamily="KFGQPC Uthmanic Script HAFS"/>
+                        <TextBlock Text=")" FontFamily="KFGQPC Uthmanic Script HAFS" />
                     </WrapPanel>
                 </DataTemplate>
             </ListView.ItemTemplate>

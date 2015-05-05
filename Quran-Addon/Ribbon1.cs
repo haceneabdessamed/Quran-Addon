@@ -71,12 +71,18 @@ namespace Quran_Addon
             response.Close();
             dynamic dynamicObject = Json.Decode(responseFromServer);
             MessageBox.Show(dynamicObject[3][0].texte);
-            /*
-            C.Result.Add(new Verset() { Soura = 1, Aya = 1, Texte = "allah" });
+            int b=dynamicObject[3].Length;
+            C.Result.Clear();
+            for(int i = 0; i < b ; i++)
+            {
+                C.Result.Add(new Verset() { Soura =  int.Parse(dynamicObject[3][i].souraId), Aya = int.Parse(dynamicObject[3][i].ayaId), Texte = dynamicObject[3][i].texte });
+            }
+            
+            
             C.lvDataBinding.Items.Refresh();
             MessageBox.Show(dynamicObject[3][0].texte);
             ///this.C.Hide();
-            */
+            
 
         }
         private void group1_DialogLauncherClick(object sender, RibbonControlEventArgs e)
