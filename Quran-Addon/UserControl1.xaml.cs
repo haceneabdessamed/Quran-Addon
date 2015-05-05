@@ -11,6 +11,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Collections.ObjectModel;
+using System.Threading;
 
 namespace Quran_Addon
 {
@@ -19,9 +21,25 @@ namespace Quran_Addon
     /// </summary>
     public partial class UserControl1 : Window
     {
+        public List<Verset> Result;
+        
+
+        
+
         public UserControl1()
         {
+
             InitializeComponent();
+            Result = new List<Verset>();
+            Result.Add(new Verset() { Soura = 1, Aya = 1, Texte = "allah" });
+            Result.Add(new Verset() { Soura = 1, Aya = 2, Texte = "rassoul" });
+            Result.Add(new Verset() { Soura = 1, Aya = 3, Texte = "mohamed" });
+            lvDataBinding.ItemsSource = Result;
+        }
+        
+        private void Tb1_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
         }
     }
 }

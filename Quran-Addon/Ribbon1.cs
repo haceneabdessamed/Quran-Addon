@@ -36,21 +36,11 @@ namespace Quran_Addon
         {
             Word.Range currentRange = Globals.ThisAddIn.Application.Selection.Range;
             currentRange.Text = this.C.Tb1.Text;
-            this.C.Hide();
 
-        }
-        private void group1_DialogLauncherClick(object sender, RibbonControlEventArgs e)
-        {
-            
-            FormRecherche = new SearchForm();
-            ///FormRecherche.Show();
-            C = new UserControl1();
-            C.Btn1.Click += new System.Windows.RoutedEventHandler(ajouterClick);
-            C.ShowDialog();
             System.Net.WebRequest request = System.Net.WebRequest.Create("http://127.0.0.1/Quran_Text_Editor/controllers/SearchController.php");
             request.Method = "POST";
             // Create POST data and convert it to a byte array.
-            string postData = "query=محمد&function=service&page=1";
+            string postData = "query=" + C.Tb1.Text + "&function=service&page=1";
             request.ContentType = "application/x-www-form-urlencoded";
             byte[] byteArray = Encoding.UTF8.GetBytes(postData);
             // Set the ContentType property of the WebRequest.
@@ -81,6 +71,25 @@ namespace Quran_Addon
             response.Close();
             dynamic dynamicObject = Json.Decode(responseFromServer);
             MessageBox.Show(dynamicObject[3][0].texte);
+            /*
+            C.Result.Add(new Verset() { Soura = 1, Aya = 1, Texte = "allah" });
+            C.lvDataBinding.Items.Refresh();
+            MessageBox.Show(dynamicObject[3][0].texte);
+            ///this.C.Hide();
+            */
+
+        }
+        private void group1_DialogLauncherClick(object sender, RibbonControlEventArgs e)
+        {
+            
+            FormRecherche = new SearchForm();
+            ///FormRecherche.Show();
+            C = new UserControl1();
+            C.Btn1.Click += new System.Windows.RoutedEventHandler(ajouterClick);
+            C.ShowDialog();
+           
+
+            
 
         }
 
