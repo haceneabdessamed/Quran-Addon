@@ -13,6 +13,8 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Collections.ObjectModel;
 using System.Threading;
+using Word = Microsoft.Office.Interop.Word;
+
 
 namespace Quran_Addon
 {
@@ -39,6 +41,17 @@ namespace Quran_Addon
         
         private void Tb1_TextChanged(object sender, TextChangedEventArgs e)
         {
+
+        }
+
+        private void lvDataBinding_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            int a = lvDataBinding.SelectedIndex;
+            Word.Range currentRange = Globals.ThisAddIn.Application.Selection.Range;
+            currentRange.Text = "[" + Result[a].Texte + "] ( " + Result[a].Aya + " : " + Result[a].Soura + " )";
+            currentRange.Font.NameBi = "KFGQPC Uthmanic Script HAFS";
+            currentRange.Font.SizeBi = 14;
+
 
         }
     }
