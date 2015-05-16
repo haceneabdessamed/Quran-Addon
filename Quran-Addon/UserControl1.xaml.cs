@@ -24,7 +24,10 @@ namespace Quran_Addon
     public partial class UserControl1 : Window
     {
         public List<Verset> Result;
+       
         
+        public string[] sourates = new string[] { "الفاتحة", "البقرة", "آل عمران", "النساء", "المائدة", "الأنعام", "الأعراف", "الأنفال", "التوبة", "يونس", "هود", "يوسف", "الرعد", "إبراهيم", "الحجر", "النحل", "الإسراء", "الكهف", "مريم", "طه", "الأنبياء", "الحج", "المؤمنون", "النور", "الفرقان", "الشعراء", "النمل", "القصص", "العنكبوت", "الروم", "لقمان", "السجدة", "الأحزاب", "سبأ", "فاطر", "يس", "الصافات", "ص", "الزمر", "غافر", "فصلت", "الشورى", "الزخرف", "الدخان", "الجاثية", "الأحقاف", "محمد", "الفتح", "الحجرات", "ق", "الذاريات", "الطور", "النجم", "القمر", "الرحمن", "الواقعة", "الحديد", "المجادلة", "الحشر", "الممتحنة", "الصف", "الجمعة", "المنافقون", "التغابن", "الطلاق", "التحريم", "الملك", "القلم", "الحاقة", "المعارج", "نوح", "الجن", "المزمل", "المدثر", "القيامة", "الإنسان", "المرسلات", "النبأ", "النازعات", "عبس", "التكوير", "الإنفطار", "المطففين", "الإنشقاق", "البروج", "الطارق", "الأعلى", "الغاشية", "الفجر", "البلد", "الشمس", "الليل", "الضحى", "الشرح", "التين", "العلق", "القدر", "البينة", "الزلزلة", "العاديات", "القارعة", "التكاثر", "العصر", "الهمزة", "الفيل", "قريش", "الماعون", "الكوثر", "الكافرون", "النصر", "المسد", "الإخلاص", "الفلق", "الناس" };
+          
 
         
 
@@ -47,9 +50,14 @@ namespace Quran_Addon
         private void lvDataBinding_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
             int a = lvDataBinding.SelectedIndex;
+            Thread.CurrentThread.CurrentUICulture = Thread.CurrentThread.CurrentCulture;
             Word.Range currentRange = Globals.ThisAddIn.Application.Selection.Range;
-            currentRange.Text = "[" + Result[a].Texte + "] ( " + Result[a].Aya + " : " + Result[a].Soura + " )";
+            Word.Paragraphs currentParagraph = Globals.ThisAddIn.Application.Selection.Paragraphs;
+            ///currentParagraph.Alignment = Word.WdParagraphAlignment.wdAlignParagraphRight;
+            currentRange.Text = "[ " + Result[a].Texte + "] ( " + Result[a].Aya + " : " + sourates[Result[a].Soura - 1] + " )";
             currentRange.Font.NameBi = "KFGQPC Uthmanic Script HAFS";
+            currentRange.Font.SizeBi = 14;
+            currentParagraph.Add(currentRange);
             currentRange.Font.SizeBi = 14;
 
 

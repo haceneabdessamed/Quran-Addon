@@ -34,9 +34,6 @@ namespace Quran_Addon
 
         protected void ajouterClick(object sender, System.Windows.RoutedEventArgs e)
         {
-            Word.Range currentRange = Globals.ThisAddIn.Application.Selection.Range;
-            currentRange.Text = this.C.Tb1.Text;
-
             System.Net.WebRequest request = System.Net.WebRequest.Create("http://127.0.0.1/Quran_Text_Editor/controllers/SearchController.php");
             request.Method = "POST";
             // Create POST data and convert it to a byte array.
@@ -81,6 +78,7 @@ namespace Quran_Addon
             
             C.lvDataBinding.Items.Refresh();
             MessageBox.Show(dynamicObject[3][0].texte);
+            
             ///this.C.Hide();
             
 
@@ -89,19 +87,14 @@ namespace Quran_Addon
         {
             
             FormRecherche = new SearchForm();
-            ///FormRecherche.Show();
             C = new UserControl1();
             C.Btn1.Click += new System.Windows.RoutedEventHandler(ajouterClick);
             C.ShowDialog();
-           
-
-            
-
         }
 
         private void dropDown1_SelectionChanged(object sender, RibbonControlEventArgs e)
         {
-
+            
         }
     }
 }
