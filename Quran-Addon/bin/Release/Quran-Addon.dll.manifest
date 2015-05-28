@@ -68,7 +68,32 @@
   </dependency>
   <dependency>
     <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Web.Infrastructure" version="1.0.0.0" publicKeyToken="31BF3856AD364E35" language="neutral" processorArchitecture="msil" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
       <assemblyIdentity name="stdole" version="7.0.3300.0" publicKeyToken="B03F5F7F11D50A3A" language="neutral" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="System.Web.Helpers" version="2.0.0.0" publicKeyToken="31BF3856AD364E35" language="neutral" processorArchitecture="msil" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="System.Web.Razor" version="2.0.0.0" publicKeyToken="31BF3856AD364E35" language="neutral" processorArchitecture="msil" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="System.Web.WebPages" version="2.0.0.0" publicKeyToken="31BF3856AD364E35" language="neutral" processorArchitecture="msil" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="System.Web.WebPages.Deployment" version="2.0.0.0" publicKeyToken="31BF3856AD364E35" language="neutral" processorArchitecture="msil" />
     </dependentAssembly>
   </dependency>
   <dependency>
@@ -84,14 +109,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Quran-Addon.dll" size="19456">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Quran-Addon.dll" size="100864">
       <assemblyIdentity name="Quran-Addon" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>bmpd1is11p3GcLjS64M8sTxSUZ4=</dsig:DigestValue>
+        <dsig:DigestValue>boDNpHpShyCZnRocjHSC/XZuk/I=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -144,4 +169,4 @@
       </vstov4:customizations>
     </vstav3:application>
   </vstav3:addIn>
-<publisherIdentity name="CN=ADMIN-PC\abdessamed" issuerKeyHash="df9561fad6ec03131d5d5420961708ea3f53b3ba" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>044zuRgi4GNKw+H/AH3eDD2d4Ic=</DigestValue></Reference></SignedInfo><SignatureValue>Y7y0BGfBz/P1RuUKy2hltHVYG6QUpUWRgXo1AsS+yIQcRRHikAxZ/SGrlNa1mtTwR/V3i5ZS+NoYQVEhIzf81OUpu179kGjoVZ2Bm5hK9XuswYYfQgqJpKM16OSY+Bjn/fQQrcEzBLGSCRNuiKQpS1ny+x1DNhb1E0WjZQ3tVPw=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>2cpk3OiSYVzsTyQe7RAkGT6tViOXPh0g888mcpFLwbyj9NJ4BjoDgoGeIRFDtHR5s8g1cixiO608dRO+cwtzR/qVTEpQXNb58PhNmdGIpsPXGxcxGW9frMgOyAyIhWMiUZ8FyMcm1NtJxBNMcLkCFAgo63CjrcF/qH0uUxu3Xkc=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="87e09d3d0cde7d00ffe1c34a63e02218b9338ed3" Description="" Url=""><as:assemblyIdentity name="Quran-Addon.dll" version="1.0.0.0" publicKeyToken="71974e9fc708cf90" language="neutral" processorArchitecture="msil" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=ADMIN-PC\abdessamed</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>jYqZBa9OXkytFlRlE+OwOisgykU=</DigestValue></Reference></SignedInfo><SignatureValue>Or8MvyBHk00lALqbJNRV0+GTgTtPrN3NQXggzo/t+sKfy4y6HA7637PfoKqLTUE/joKrklRV0Q7royDno3gHt40SNxDs7Cfd85jI+v3nffy7KopYFugjb0W8BfU82A3h+XlJMmd3W2hagBT9pihRCJ13vpBncNmap/6Qnl2Pkow=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>2cpk3OiSYVzsTyQe7RAkGT6tViOXPh0g888mcpFLwbyj9NJ4BjoDgoGeIRFDtHR5s8g1cixiO608dRO+cwtzR/qVTEpQXNb58PhNmdGIpsPXGxcxGW9frMgOyAyIhWMiUZ8FyMcm1NtJxBNMcLkCFAgo63CjrcF/qH0uUxu3Xkc=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIB5TCCAU6gAwIBAgIQPPCaY3l2q41OoWJpy7XI/zANBgkqhkiG9w0BAQUFADAxMS8wLQYDVQQDHiYAQQBEAE0ASQBOAC0AUABDAFwAYQBiAGQAZQBzAHMAYQBtAGUAZDAeFw0xNTA1MDIxNjE2MTRaFw0xNjA1MDEyMjE2MTRaMDExLzAtBgNVBAMeJgBBAEQATQBJAE4ALQBQAEMAXABhAGIAZABlAHMAcwBhAG0AZQBkMIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDZymTc6JJhXOxPJB7tECQZPq1WI5c+HSDzzyZykUvBvKP00ngGOgOCgZ4hEUO0dHmzyDVyLGI7rTx1E75zC3NH+pVMSlBc1vnw+E2Z0Yimw9cbFzEZb1+syA7IDIiFYyJRnwXIxybU20nEE0xwuQIUCCjrcKOtwX+ofS5TG7deRwIDAQABMA0GCSqGSIb3DQEBBQUAA4GBAFV0nE6Xjf/npdsjGIH+FjIv5jfuMFjdccZzlnYRgsBiG6IonRuGJDoOzAn78HtkhfplIA10dgIiy4OlRPKfOfMpxUB3T2ViisdbwSmjbzy/m1BHD8Mr6h5ZR+zsEjSkXwtUUn2cBz1gZ7MFJQcvnraIi+hq7YHBDzb93yMFYSar</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>
+<publisherIdentity name="CN=ADMIN-PC\abdessamed" issuerKeyHash="df9561fad6ec03131d5d5420961708ea3f53b3ba" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>WPkNEbbsvypuxK//oNtzdHhHIJ0=</DigestValue></Reference></SignedInfo><SignatureValue>gJ4iNgpFsHt9UQDd/Rw2cbcDNSJz447wCOdCwhkSdeK+gGxC+3aJBJFBDkMzJeVbgKAJV/osO0LrXe3ayM2CaV0YJ2U7dTvU/NZgnNjEn7iPTsfvaneQdaoeRJHuvwXexcJxEZ934jP1s7a4McLNNOOfA1kFvQRcpGOkg7WsGx4=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>2cpk3OiSYVzsTyQe7RAkGT6tViOXPh0g888mcpFLwbyj9NJ4BjoDgoGeIRFDtHR5s8g1cixiO608dRO+cwtzR/qVTEpQXNb58PhNmdGIpsPXGxcxGW9frMgOyAyIhWMiUZ8FyMcm1NtJxBNMcLkCFAgo63CjrcF/qH0uUxu3Xkc=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="9d2047787473dba0ffafc46e2abfecb6110df958" Description="" Url=""><as:assemblyIdentity name="Quran-Addon.dll" version="1.0.0.0" publicKeyToken="71974e9fc708cf90" language="neutral" processorArchitecture="msil" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=ADMIN-PC\abdessamed</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>2n1RWcjinIANGDRgHndkW0uTdUo=</DigestValue></Reference></SignedInfo><SignatureValue>hnatpYpTs9mlTv4XyFH7PAtg7UzOrwkB0T58J4rvqiZeCwNIYzXwMLzOHeBL6i471L9Xt1CsA/aRP1sCdx615MtaLVLYf43a/6qgZoh0QiVerlsm6KTw/1XKq2tqd6ExF0rbtugG0AviXgOgEkbkNr5qKsDI+A5OwqJ+wI3f4W0=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>2cpk3OiSYVzsTyQe7RAkGT6tViOXPh0g888mcpFLwbyj9NJ4BjoDgoGeIRFDtHR5s8g1cixiO608dRO+cwtzR/qVTEpQXNb58PhNmdGIpsPXGxcxGW9frMgOyAyIhWMiUZ8FyMcm1NtJxBNMcLkCFAgo63CjrcF/qH0uUxu3Xkc=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIB5TCCAU6gAwIBAgIQPPCaY3l2q41OoWJpy7XI/zANBgkqhkiG9w0BAQUFADAxMS8wLQYDVQQDHiYAQQBEAE0ASQBOAC0AUABDAFwAYQBiAGQAZQBzAHMAYQBtAGUAZDAeFw0xNTA1MDIxNjE2MTRaFw0xNjA1MDEyMjE2MTRaMDExLzAtBgNVBAMeJgBBAEQATQBJAE4ALQBQAEMAXABhAGIAZABlAHMAcwBhAG0AZQBkMIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDZymTc6JJhXOxPJB7tECQZPq1WI5c+HSDzzyZykUvBvKP00ngGOgOCgZ4hEUO0dHmzyDVyLGI7rTx1E75zC3NH+pVMSlBc1vnw+E2Z0Yimw9cbFzEZb1+syA7IDIiFYyJRnwXIxybU20nEE0xwuQIUCCjrcKOtwX+ofS5TG7deRwIDAQABMA0GCSqGSIb3DQEBBQUAA4GBAFV0nE6Xjf/npdsjGIH+FjIv5jfuMFjdccZzlnYRgsBiG6IonRuGJDoOzAn78HtkhfplIA10dgIiy4OlRPKfOfMpxUB3T2ViisdbwSmjbzy/m1BHD8Mr6h5ZR+zsEjSkXwtUUn2cBz1gZ7MFJQcvnraIi+hq7YHBDzb93yMFYSar</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>

@@ -7,20 +7,20 @@
              >
     <Grid Margin="0,0,0,10" Height="263" VerticalAlignment="Bottom">
 
-        <TextBox x:Name="Tb1" HorizontalAlignment="Left" Height="23" Margin="87.09,72,-129,-32" TextWrapping="Wrap" Text="Requête" VerticalAlignment="Top" Width="120" Grid.Column="1" TextChanged="Tb1_TextChanged"/>
-        <Button x:Name="Btn1" Content="Rechercher" HorizontalAlignment="Left" Margin="108,120,0,0" VerticalAlignment="Top" Width="75"/>
+        <TextBox x:Name="Tb1" HorizontalAlignment="Left" Height="23" Margin="87.09,72,-129,-32" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.Column="1" TextChanged="Tb1_TextChanged"/>
+        <Button x:Name="Btn1" Content="إبحث" HorizontalAlignment="Left" Margin="108,120,0,0" VerticalAlignment="Top" Width="75"/>
         <ListView Margin="10,157,10,13" Name="lvDataBinding" MouseDoubleClick="lvDataBinding_MouseDoubleClick">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <WrapPanel>
-                        <TextBlock Text="Soura: "/>
+                        <TextBlock Text="السورة"/>
                         <TextBlock Text="{Binding Soura}"/>
                         <TextBlock Text=", " />
-                        <TextBlock Text="Aya: " />
+                        <TextBlock Text="الأية" />
                         <TextBlock Text="{Binding Aya}"/>
-                        <TextBlock Text=" (" FontFamily="KFGQPC Uthmanic Script HAFS"/>
-                        <TextBlock Text="{Binding Texte}" FontFamily="KFGQPC Uthmanic Script HAFS"/>
-                        <TextBlock Text=")" FontFamily="KFGQPC Uthmanic Script HAFS" />
+                        <TextBlock Text=" (" />
+                        <TextBlock Text="{Binding Texte}" />
+                        <TextBlock Text=")"/>
                     </WrapPanel>
                 </DataTemplate>
             </ListView.ItemTemplate>
