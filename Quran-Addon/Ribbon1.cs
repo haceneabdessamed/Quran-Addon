@@ -68,7 +68,7 @@ namespace Quran_Addon
             dataStream.Close();
             response.Close();
             dynamic dynamicObject = Json.Decode(responseFromServer);
-            MessageBox.Show(dynamicObject[3][0].texte);
+            ///MessageBox.Show(dynamicObject[3][0].texte);
             int b=dynamicObject[3].Length;
             C.Result.Clear();
             for(int i = 0; i < b ; i++)
@@ -78,12 +78,12 @@ namespace Quran_Addon
             
             
             C.lvDataBinding.Items.Refresh();
-            MessageBox.Show(dynamicObject[3][0].texte);
+            ///MessageBox.Show(dynamicObject[3][0].texte);
             ///this.C.Hide();
             recherche.demo a = new recherche.demo();
-            string t=a.Recherche("يونس");
-            dynamic dynamicObject2 = Json.Decode(t);
-            a = new recherche.demo();
+            ///string t=a.Recherche("يونس");
+            ///dynamic dynamicObject2 = Json.Decode(t);
+            ///a = new recherche.demo();
 
         }
         private void group1_DialogLauncherClick(object sender, RibbonControlEventArgs e)

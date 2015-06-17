@@ -36,9 +36,11 @@ namespace Quran_Addon
 
             InitializeComponent();
             Result = new List<Verset>();
+            /*
             Result.Add(new Verset() { Soura = 1, Aya = 1, Texte = "allah" });
             Result.Add(new Verset() { Soura = 1, Aya = 2, Texte = "rassoul" });
             Result.Add(new Verset() { Soura = 1, Aya = 3, Texte = "mohamed" });
+             */
             lvDataBinding.ItemsSource = Result;
         }
         
