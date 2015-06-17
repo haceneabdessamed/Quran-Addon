@@ -10,6 +10,7 @@ using System.Web.Http;
 using System.Net.Http;
 using System.IO;
 using System.Web.Helpers;
+
 namespace Quran_Addon
 {
     public partial class Ribbon1
@@ -78,9 +79,11 @@ namespace Quran_Addon
             
             C.lvDataBinding.Items.Refresh();
             MessageBox.Show(dynamicObject[3][0].texte);
-            
             ///this.C.Hide();
-            
+            recherche.demo a = new recherche.demo();
+            string t=a.Recherche("يونس");
+            dynamic dynamicObject2 = Json.Decode(t);
+            a = new recherche.demo();
 
         }
         private void group1_DialogLauncherClick(object sender, RibbonControlEventArgs e)

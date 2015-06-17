@@ -22,5 +22,15 @@ namespace Quran_Addon.Properties {
                 return defaultInstance;
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
+        [global::System.Configuration.DefaultSettingValueAttribute("http://127.0.0.1/Quran_Text_Editor/service2.php")]
+        public string Quran_Addon_recherche_demo {
+            get {
+                return ((string)(this["Quran_Addon_recherche_demo"]));
+            }
+        }
     }
 }
