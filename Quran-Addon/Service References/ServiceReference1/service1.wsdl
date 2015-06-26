@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://127.0.0.1/soap/demo" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns="http://schemas.xmlsoap.org/wsdl/" targetNamespace="http://127.0.0.1/soap/demo" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://127.0.0.1/soap/demo">
+      <xsd:import namespace="http://schemas.xmlsoap.org/soap/encoding/" />
+      <xsd:import namespace="http://schemas.xmlsoap.org/wsdl/" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="InsertionRequest">
+    <wsdl:part name="input" type="tns:ArrayOfString" />
+  </wsdl:message>
+  <wsdl:message name="InsertionResponse">
+    <wsdl:part name="output" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:portType name="demoPortType">
+    <wsdl:operation name="Insertion">
+      <documentation>A simple Hello World web method</documentation>
+      <wsdl:input message="tns:InsertionRequest" />
+      <wsdl:output message="tns:InsertionResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="demoBinding" type="tns:demoPortType">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="rpc" />
+    <wsdl:operation name="Insertion">
+      <soap:operation soapAction="http://127.0.0.1/Quran_Text_Editor/service1.php/Insertion" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="http://127.0.0.1/services" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="http://127.0.0.1/services" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="demo">
+    <wsdl:port name="demoPort" binding="tns:demoBinding">
+      <soap:address location="http://127.0.0.1/Quran_Text_Editor/service1.php" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
